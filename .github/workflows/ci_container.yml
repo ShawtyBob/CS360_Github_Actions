@@ -40,3 +40,11 @@ jobs:
       with:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/siriyagorn_image:latest
+    - name: Configure AWS credentials
+      if: success()
+      uses: aws-actions/configure-aws-credentials@13d241b293754004c80624b5567555c4a39ffbe3
+      with:
+      aws-access-key-id: ${{ secrets.ASIAU6GDZFREPUT4JCFT }}
+      aws-secret-access-key: ${{ secrets.CePcpeEk8Z1ruQLOXdbRTZbA6xCBZAi8liJ3kF4m }}
+      aws-session-token: ${{ secrets.IQoJb3JpZ2luX2VjEAQaCXVzLXdlc3QtMiJIMEYCIQDx/+uI5Vz9UXKH/nLCPGCCmqf0X3lwHe3U7WGGqzx7OwIhAMmJt8gYHOxFWWGrl4c6CYJdnnqu05Up9WpEDtV3+Oj8Kr8CCJ3//////////wEQABoMMzM5NzEzMDEwNzYwIgzJItLIhyGnvWXZGI8qkwL0DSyTHL7DGKV+Fj4aOEIiOUD3Kna0srfJOTdz4Yriq2u3H5Jlknoi9m5mdVEuV7rP8HYjqrqqzbamIzftHFI/a2X8Ds4ckIo4LxEhR35nl3zBlftHX1iHDAEiRJt/EGjlBYW9BNIjt21gBOl7kTDcIc6uZOHuJyh3N0WTu06NjRIggjB6AMt6sGKcfRk6oicZUDCrY+Xmf7Qn8h5S7HlQdP7+q2zqJG1nk4MgmJvECyxguI6xCVTsvJOcriQ9+wGeo/it/SjRCApAzClMmq1aOdeq4p/DiDOPiLjDif6TBkdIqQPA8tnGfDNbij3sxP//gP4Xa2DGS5AuMCUbGKBl0CNV+HLA6kMfAgRzBS4PmuxyMjDy0vq5BjqcAZgux3oCRgs6FIiHI6ZCqK5GxV4feowxIIEh9HQSFmaJSx6IyqiIuyx0B6DODJLquJawPsG2l/SvRJQDNqBKtv+MCUWOQx5LbSCW1QKmhUGSQs+zWiJBXG6OpxiT9NfKDDXjODrfosNnieVRiK9dbCaAcwey79sjcDkr4IzwuvlzCpc7smaSNWLAZd6wI+0m3vssMACD//RvUdnAYw== }}
+      aws-region: ${{ secrets.us-east-1 }}
